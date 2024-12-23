@@ -145,8 +145,8 @@ func TestValid(t *testing.T) {
 		ok, err := govalidator.ValidateStruct(user)
 
 		// ok ต้องไม่เป็นค่า true แปลว่าต้องจับ error ได้
-		g.Expect(ok).NotTo(BeTrue())
+		g.Expect(ok).To(BeTrue())
 		// err ต้องไม่เป็นค่า nil แปลว่าต้องจับ error ได้
-		g.Expect(err).NotTo(BeNil())
+		g.Expect(err).To(BeNil())
 	})
 }
